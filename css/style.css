@@ -25,6 +25,7 @@ body {
 
 .home {
   height: 100vh;
+  width: 100vw;
   background-image: url(../images/bg-home.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -180,7 +181,7 @@ body {
 
 .about .experience h2 {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .about .experience h2:after {
@@ -242,6 +243,10 @@ body {
   line-height: 25px;
 }
 
+.services .box .box-images {
+  width: 80px;
+}
+
 /* +++++++++++++++++++++++++++++++ APPOINTMENT  +++++++++++++++++++++++++++ */
 
 .appointment {
@@ -266,45 +271,11 @@ body {
   display: block;
 }
 
-.appointment form {
-  margin-top: 80px;
-}
-
-.appointment .personal-data {
-  display: flex;
-  justify-content: space-between;
+.appointment .redirect {
   margin-bottom: 20px;
-}
-
-.appointment .input-wrapper {
-  width: 100%;
-  margin-right: 50px;
-}
-
-.appointment .input-wrapper:last-of-type {
-  margin-right: 0;
-}
-
-.appointment label {
-  display: block;
-  color: var(--color-primary-light);
-  font-size: 14px;
-  margin-bottom: 4px;
-  
-}
-
-.appointment .personal-data input,
-.appointment .personal-data select,
-.appointment textarea {
-  padding: 10px 10px;
-  outline: none;
-  border: none;
-  width: 100%;
-  border-radius: 2px;
-}
-
-.appointment textarea {
-  height: 100px;
+  padding: 50px;
+  text-align: center;
+  color: var(--color-secundary);
 }
 
 .appointment button {
@@ -315,6 +286,12 @@ body {
   margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
+  margin: 40px;
+}
+
+.appointment button a {
+  text-decoration: none;
+  color: var(--color-primary-light);
 }
 
 /* ++++++++++++++++++++++++++++++++++++++ GALLERY +++++++++++++++++++++++++++ */
@@ -420,4 +397,220 @@ body {
   padding: 40px;
   color: white;
   font-size: 12px;
+  
+}
+
+.footer .credits {
+  font-size: 10px;
+}
+
+.footer div a {
+  text-decoration: none;
+  color: white;
+}
+
+/**************** RESPONSIVE ************************/
+
+@media (min-width: 415)  and (max-width: 1200px) {
+  .timing {
+    display: none;
+    color: white;
+  }
+
+  .experience img {
+    display: none;
+  }
+}
+
+@media(max-width: 414px) {
+
+  .container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  
+  /* +++++++++++++++++++++ HOME ++++++++++++++++++++++ */
+
+  .home {
+    background-image: url(../new-images/bg-home.jpg);
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+
+  .home .header {
+    display: none;
+  }
+
+  .timing {
+    display: none;
+  }
+
+  .experience img {
+    display: none;
+  }
+
+  /* ++++++++++++++++++++++++   HOME - BANNER +++++++++++++++++++++ */
+  .home .banner {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 0px;
+    margin-top: 0px;
+  
+  }
+
+  .home .banner .slogan1 {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+  .home .banner h1 {
+    font-size: 30px;
+  }
+  
+  .home .banner .slogan2 {
+    margin: 15px;
+  }
+
+  /****************************   ABOUT *****************/
+
+  .about .experience {
+    margin-top: 50px;
+    margin-left: 14%;
+    padding-bottom: 40px;
+  }
+
+  .about .experience h2 {
+    font-size: 30px;
+  }
+
+  .about .experience .text p {
+    font-size: 14px;
+  }
+
+  /* +++++++++++++++++++++++  SERVICES +++++++++++++++++++++ */
+
+  .services {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--color-primary-light);
+  }
+
+  .services .boxes {
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .services h2 {
+    font-size: 30px;
+  }
+
+  .services .box {
+    border: 3px solid var(--color-primary);
+    padding: 22px 15px;
+    margin: 30px 70px;
+  }
+  
+  .services .box h4 {
+    color: var(--color-secundary);
+    margin-top: 20px;
+  
+  }
+
+  .services .box p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  .services .box .box-images {
+    width: 60px;
+  }  
+
+  /* +++++++++++++++++++++++++++++++ APPOINTMENT  +++++++++++++++++++++++++++ */
+
+  .appointment {
+    background-size: 150px;
+    padding: 50px 0;
+  }
+
+  .appointment h2 {
+    font-size: 26px;
+  }
+
+  .appointment button {
+    margin: 15px;
+  }
+
+  .appointment .redirect {
+    padding: 40px
+  }
+
+  /* ++++++++++++++++++++++++++++++++++++++ GALLERY +++++++++++++++++++++++++++ */
+
+  .gallery {
+    padding: 33px 0 0 0;
+  }
+
+  .gallery h2 {
+    font-size: 30px;
+  }
+
+  .gallery .gallery-wrapper {
+    margin: 40px auto 0 auto;
+    width: 250px;
+    height: 600px;
+  }
+  
+  .gallery .gallery-wrapper div{
+    border: 6px solid var(--color-primary);
+    margin: 3px;
+    width: 50%;
+  }
+
+  /* ++++++++++++++++++++++++++++++++++++++ LOCATION+++++++++++++++++++++++++++ */
+
+  .location {
+    padding: 100px 0;
+    background: url(../images/bg-location.jpg);
+    background-size: cover;
+  }
+
+  .location .head {
+    margin: 0 auto;
+    width: 80vw;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .location .head .info {
+    margin-bottom: 10px;
+  }
+  
+  .location .head .info .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .location .head .info .text span {
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .location .map {
+    margin: 0 auto;
+    width: 80vw;
+  }
+
+  .location .map iframe {
+    width: 80vw;
+  }
 }
